@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://drt37co54bmtd"]
+
+[ext_resource type="Texture2D" uid="uid://b6jvwsf6i0uv7" path="res://Assets/Cards/5Card.png" id="1_68j3p"]
+[ext_resource type="Script" path="res://Codes/5_card.gd" id="2_v3o5j"]
+
+[node name="5Card" type="CharacterBody2D"]
+script = ExtResource("2_v3o5j")
+
+[node name="5Card" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, 72)
+scale = Vector2(2, 2)
+texture = ExtResource("1_68j3p")
+
+[node name="5CardCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2(-15, -22)
+scale = Vector2(1.3, 1.3)
+polygon = PackedVector2Array(15, 6, 80, 6, 92, 20, 92, 123, 79, 137, 16, 137, 4, 123, 4, 19, 10, 10)
+disabled = true

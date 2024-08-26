@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://i3hbmqttdgc3"]
+
+[ext_resource type="Texture2D" uid="uid://cvnd16ktn3bwj" path="res://Assets/Cards/8Card.png" id="1_c4iov"]
+[ext_resource type="Script" path="res://Codes/8_card.gd" id="1_iqrsn"]
+
+[node name="8Card" type="CharacterBody2D"]
+script = ExtResource("1_iqrsn")
+
+[node name="8Card" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, 72)
+scale = Vector2(2, 2)
+texture = ExtResource("1_c4iov")
+
+[node name="8CardCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2(-14, -22)
+scale = Vector2(1.3, 1.3)
+polygon = PackedVector2Array(15, 6, 80, 6, 92, 20, 92, 123, 79, 137, 16, 137, 4, 123, 4, 19, 10, 10)
+disabled = true

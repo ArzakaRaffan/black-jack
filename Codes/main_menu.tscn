@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlbuc8okannp1"]
+
+[ext_resource type="Script" path="res://Codes/main_menu.gd" id="1_4axw8"]
+[ext_resource type="Texture2D" uid="uid://5rva0pxvu7rh" path="res://Assets/BackGround/BlackJackBackground.jpg" id="1_ps5im"]
+[ext_resource type="FontFile" uid="uid://cxljgyuaqr8j5" path="res://Assets/Fonts/ThaleahFat.ttf" id="2_yoghk"]
+
+[node name="mainMenu" type="Node2D"]
+script = ExtResource("1_4axw8")
+
+[node name="BlackJackBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(1.88235, 1.81513)
+texture = ExtResource("1_ps5im")
+
+[node name="playButton" type="Button" parent="."]
+offset_left = 445.0
+offset_top = 310.0
+offset_right = 5445.0
+offset_bottom = 2490.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("2_yoghk")
+theme_override_font_sizes/font_size = 1500
+text = "PLAY"
+
+[node name="quitButton" type="Button" parent="."]
+offset_left = 445.0
+offset_top = 460.0
+offset_right = 5465.0
+offset_bottom = 2640.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("2_yoghk")
+theme_override_font_sizes/font_size = 1500
+text = "	QUIT"
+
+[node name="gameTitle" type="Label" parent="."]
+offset_left = 325.0
+offset_top = 133.0
+offset_right = 9950.0
+offset_bottom = 1966.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_yoghk")
+theme_override_font_sizes/font_size = 2000
+text = "Black Jack"
+
+[node name="gameTitle2" type="Label" parent="."]
+offset_left = 333.0
+offset_top = 127.0
+offset_right = 9958.0
+offset_bottom = 1960.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("2_yoghk")
+theme_override_font_sizes/font_size = 2000
+text = "Black Jack"
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]

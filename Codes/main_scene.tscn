@@ -1,0 +1,110 @@
+[gd_scene load_steps=4 format=3 uid="uid://c50t3u6sv2nm"]
+
+[ext_resource type="Script" path="res://Codes/main_scene.gd" id="1_7g4ke"]
+[ext_resource type="Texture2D" uid="uid://5rva0pxvu7rh" path="res://Assets/BackGround/BlackJackBackground.jpg" id="1_v73bg"]
+[ext_resource type="FontFile" uid="uid://cxljgyuaqr8j5" path="res://Assets/Fonts/ThaleahFat.ttf" id="3_fqk0x"]
+
+[node name="mainScene" type="Node2D"]
+script = ExtResource("1_7g4ke")
+
+[node name="BlackJackBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(1.88235, 1.81513)
+texture = ExtResource("1_v73bg")
+
+[node name="cardSum" type="Label" parent="."]
+texture_filter = 1
+offset_left = 539.0
+offset_top = 218.0
+offset_right = 1289.0
+offset_bottom = 3592.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("3_fqk0x")
+theme_override_font_sizes/font_size = 1500
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hitButton" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 386.0
+offset_right = 3028.0
+offset_bottom = 1926.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("3_fqk0x")
+theme_override_font_sizes/font_size = 1000
+text = "HIT"
+metadata/_edit_use_anchors_ = true
+
+[node name="passButton" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 500.0
+offset_right = 3008.0
+offset_bottom = 2040.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("3_fqk0x")
+theme_override_font_sizes/font_size = 1000
+text = "PASS"
+
+[node name="loseLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 485.0
+offset_top = -136.0
+offset_right = 3485.0
+offset_bottom = 2617.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_fqk0x")
+theme_override_font_sizes/font_size = 1500
+text = "YOU
+LOSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="winLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 485.0
+offset_top = -136.0
+offset_right = 3485.0
+offset_bottom = 2617.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(3.17663e-06, 0.576464, 0.813977, 1)
+theme_override_fonts/font = ExtResource("3_fqk0x")
+theme_override_font_sizes/font_size = 1500
+text = "YOU
+WIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="drawLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 485.0
+offset_top = -136.0
+offset_right = 3485.0
+offset_bottom = 2617.0
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fqk0x")
+theme_override_font_sizes/font_size = 1500
+text = "DRAW"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyScore" type="Label" parent="."]
+visible = false
+offset_left = 405.0
+offset_top = 69.0
+offset_right = 7046.0
+offset_bottom = 2364.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("3_fqk0x")
+theme_override_font_sizes/font_size = 1250
+text = "ENEMY SCORE
+0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="hitButton" to="." method="_on_hit_button_pressed"]
+[connection signal="pressed" from="passButton" to="." method="_on_pass_button_pressed"]
